@@ -1,4 +1,4 @@
-package com.gebeya.Asquala;
+package et.com.gebeya.Asquala;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

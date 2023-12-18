@@ -1,0 +1,188 @@
+ student
+        id serial
+
+        first_name varchar(255)
+
+        middle_name varchar(255)
+
+        last_name varchar(255)
+
+        dob Date()
+
+        student_id varchar(50)
+
+        gender varchar(1)
+
+        is_active boolean
+
+        address_id serial (foreign key to address one to one)
+
+        created_on timestamp
+
+        updated_on timestamp
+
+
+
+        
+
+    teacher
+        id serial
+
+        first_name varchar(255)
+
+        middle_name varchar(255)
+
+        last_name varchar(255)
+
+        gender varchar(1)
+
+        qualification varchar(255)
+
+        is_active boolean
+
+        address_id serial (foreign key to address one to one)
+
+        created_on timestamp
+
+        updated_on timestamp
+
+
+
+
+
+    guardian
+        id serial
+
+        first_name varchar(255)
+
+        middle_name varchar(255)
+
+        last_name varchar(255)
+
+        gender varchar(1)
+
+        is_active boolean
+
+        address_id serial (foreign key to address one to one)
+
+        created_on timestamp
+
+        updated_on timestamp
+
+        
+
+    student_guardian (for many to many relationship b/n students and guardian)
+        student_id serial
+
+        guardian_id serial
+
+       
+
+     address
+        id serial
+
+        email varchar(255)
+
+        city varchar(255)
+
+        sub_city varchar(255)
+
+        wereda varchar(255)
+
+        house_number varchar(255)
+
+        is_active boolean
+
+        created_on timestamp
+
+        updated_on timestamp
+
+        
+
+    phone_number
+        id serial
+
+        phone_number varchar(255)
+
+        address_id serial (foreign key to address many to one)
+
+        is_active boolean
+
+        created_on timestamp
+
+        updated_on timestamp
+
+        
+
+    
+
+    grade_section
+        id serial
+
+        grade varchar(10)
+
+        section varchar(10)
+
+        home_room_teacher serial (home room teacher id)
+
+        is_active boolean
+
+        created_on timestamp
+
+        updated_on timestamp
+
+        
+
+    student_grade_section (for many to one relationship b/n students and grade section)
+        student_id serial 
+
+        grade_section_id serial
+
+        
+
+    subject
+        id serial
+
+        name varchar(255)
+
+        is_active boolean
+
+        created_on timestamp
+
+        updated_on timestamp
+
+        
+
+    teacher_subject
+        subject_id serial
+
+        teacher_id serial
+
+    
+
+    grade_section_subject for many to many relationship b/n subject and grade section)
+        grade_section_id serial
+
+        subject_id serial
+
+        
+
+    attendance
+        id serial
+
+        student_id serial
+
+        teacher_id serial
+
+        attendance_date date
+
+        status varchar(255)
+
+        remark varchar(255)
+
+        created_on timestamp
+
+        updated_on timestamp
+
+        
+

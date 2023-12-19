@@ -1,9 +1,6 @@
 package et.com.gebeya.Asquala.model;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
@@ -14,6 +11,7 @@ import java.util.Set;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

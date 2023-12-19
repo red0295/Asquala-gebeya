@@ -1,10 +1,16 @@
 package et.com.gebeya.Asquala.model;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.sql.Timestamp;
 import java.util.Set;
 
 @Entity
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
 public class Subject {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,11 +1,12 @@
 package et.com.gebeya.Asquala.model;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 @Entity
 @AllArgsConstructor
@@ -13,18 +14,14 @@ import java.security.Timestamp;
 @Setter
 @ToString
 @NoArgsConstructor
-public class Address {
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String email;
-    private String city;
-    private String subCity;
-    private String wereda;
-    private String houseNumber;
-    private boolean isActive;
+    private Long Id;
+    private String username;
+    private String password;
+    private String role;
+    private Long roleId;
     private Timestamp createdOn;
     private Timestamp updatedOn;
-
 }

@@ -20,22 +20,19 @@ public class GradeSectionController {
         return ResponseEntity.ok("");
     }
 
-    @DeleteMapping("/grade-sections/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteGradeSection(@PathVariable("id") int id){
         return ResponseEntity.ok("");
     }
-    @GetMapping("/grade-sections")
+    @GetMapping
     public ResponseEntity<?> getAllGradeSection(){
         return ResponseEntity.ok("");
     }
-    @GetMapping("/grade-sections/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<?> getGradeSectionById(@PathVariable("id") int id){
         return ResponseEntity.ok("");
     }
 
-    @GetMapping("/grade-sections")
-    public ResponseEntity<?> getGradeSectionWithParam(@RequestParam(required = false) Map<String, String> search){
-        return ResponseEntity.ok("");
-    }
+
 
 }

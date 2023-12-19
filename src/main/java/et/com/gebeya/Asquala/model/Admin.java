@@ -1,8 +1,9 @@
 package et.com.gebeya.Asquala.model;
+
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Set;
+import java.sql.Timestamp;
 
 @Entity
 @AllArgsConstructor
@@ -10,7 +11,7 @@ import java.util.Set;
 @Setter
 @ToString
 @NoArgsConstructor
-public class Guardian {
+public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -20,11 +21,11 @@ public class Guardian {
     private String lastName;
     private String gender;
     private boolean isActive;
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id")
     private Address address;
 
-    @ManyToMany(mappedBy = "guardians")
-    private Set<Student> students;
+    private Timestamp createdOn;
+    private Timestamp updatedOn;
 }
-

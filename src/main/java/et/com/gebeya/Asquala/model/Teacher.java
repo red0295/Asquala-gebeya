@@ -1,9 +1,15 @@
 package et.com.gebeya.Asquala.model;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.Set;
 
 @Entity
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
 public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
